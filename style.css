@@ -1,0 +1,393 @@
+@keyframes twinkle {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  overflow: hidden;
+  cursor: none;
+}
+.name{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+  margin-left: 80%;
+	margin-top: 3%;
+  font-weight: 260;
+}
+.instruction{
+  font-family: 'Inconsolata', monospace;
+  color: rgb(49, 184, 49);
+  position: absolute;
+	top: 03%;
+	left: 03%;
+  font-weight: 300;
+  animation: blink 4s infinite;
+}
+
+main {
+  height: 200px;
+  width: 300px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+main .links .link {
+  --color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  color: var(--color);
+  margin: 2rem;
+  cursor: none;
+  transition: color 300ms ease;
+}
+main .links .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 300ms ease;
+}
+main .links .link:hover {
+  --color: rgb(255, 255, 255);
+}
+main .links .link:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+main .links .link.skill{
+  margin: 20%;
+}
+main .links .link.project{
+  margin: 30%;
+}
+
+.hiddennav{
+  display: none;
+}
+main .links .link.skill:focus ~ #hskill,
+#hskill:hover,
+#hskill:active {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    top: 70px;
+    left: 50px;
+    height: 100%;
+    width: 30%;
+}
+main .links .link.project:focus ~ #hproject,
+#hproject:hover,
+#hproject:active {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    top: 70px;
+    left: 50px;
+    height: 100%;
+    width: 30%;
+}
+
+
+.paraskill1{
+	display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#pelo_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+.paraskill2{
+  display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#bijo_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+.paraskill3{
+	display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#trijo_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+.paraproject1{
+	display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#chotho_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+.paraproject2{
+	display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#pachmo_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+.paraproject3{
+	display: block;
+	margin-top: 20%;
+	margin-left: 11%;
+	height: 40px;
+	width: 80%;
+}
+#chhatho_fakro{
+  font-family: 'Kanit', sans-serif;
+  color: rgb(49, 184, 49);
+}
+
+main .link2 .link {
+  --color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  color: var(--color);
+  margin: 2rem;
+  cursor: none;
+  transition: color 300ms ease;
+}
+main .link2 .link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: white;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 300ms ease;
+}
+main .link2 .link:hover {
+  --color: rgb(255, 255, 255);
+}
+main .link2 .link:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+main .link2 .link.contact{
+  margin: 30%;
+}
+
+.hiddensupp {display: none; }
+
+main .link2 .link:focus ~ #hsupp,
+#hsupp:hover,
+#hsupp:active {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    padding: 10px;
+    right: 70px;
+    bottom: 70px;
+}
+.hiddensupp a {
+  margin: 0 15px;
+  color: #fff;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: all 150ms ease;
+  mix-blend-mode: difference;
+}
+.hiddensupp a:hover {
+  transform: scale(1.1);
+}
+
+
+.cursor .cursor--small,
+.cursor .cursor--large,
+.cursor .cursor--text {
+position: fixed;
+left: 0;
+top: 0;
+transform: translate(-50%, -50%);
+border-radius: 50%;
+width: var(--cursor-size);
+height: var(--cursor-size);
+mix-blend-mode: difference;
+pointer-events: none;
+user-select: none;
+}
+.cursor .cursor--text {
+--cursor-size: fit-content;
+font-size: 0.75rem;
+color: #fff;
+opacity: 0;
+}
+.cursor .cursor--text .text {
+font-family: sans-serif;
+font-weight: bold;
+}
+.cursor .cursor--small {
+--cursor-size: 20px;
+background: #fff;
+}
+.cursor .cursor--large {
+--cursor-size: 60px;
+border: 2px solid #fff;
+}
+
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 1s infinite;
+}
+.star:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+}
+.star:nth-child(2) {
+    top: 05%;
+    left: 30%;
+    animation-delay: 0s;
+}
+.star:nth-child(3) {
+    top: 5%;
+    left: 5%;
+    animation-delay: 0s;
+}
+.star:nth-child(5) {
+    top: 70%;
+    left: 10%;
+    animation-delay: 0s;
+}
+.star:nth-child(6) {
+    top: 75%;
+    left: 25%;
+    animation-delay: 0s;
+}
+.star:nth-child(7) {
+    top: 90%;
+    left: 20%;
+    animation-delay: 0s;
+}
+.star:nth-child(8) {
+    top: 85%;
+    left: 60%;
+    animation-delay: 0s;
+}
+.star:nth-child(9) {
+    top: 75%;
+    left: 95%;
+    animation-delay: 0s;
+}
+.star:nth-child(10) {
+    top: 35%;
+    left: 90%;
+    animation-delay: 0s;
+}
+.star:nth-child(11) {
+    top: 10%;
+    left: 75%;
+    animation-delay: 0.2s;
+}
+
+main .link .star{
+	  width: 7px;
+    height: 7px;
+    animation-delay: 0.2s;
+}
+main .social .star{
+	  width: 7px;
+    height: 7px;
+    animation-delay: 0.2s;
+}
+
+main .links .hiddennav .skill_star .star{
+    position: relative;
+    width: 7px;
+    height: 7px;
+    animation-delay: 0.2s;
+}
+main .links .hiddennav .skill_star.one .star{
+    top: 10%;
+    left: 10%;
+}
+main .links .hiddennav .skill_star.two .star{
+    top: 10%;
+    left: 10%;
+}
+main .links .hiddennav .skill_star.three .star{
+    top: 10%;
+    left: 10%;
+}
+main .links .hiddennav .project_star .star{
+  position: relative;
+  width: 7px;
+  height: 7px;
+  animation-delay: 0.2s;
+}
+main .links .hiddennav .project_star.one .star{
+  top: 10%;
+  left: 10%;
+}
+main .links .hiddennav .project_star.two .star{
+  top: 10%;
+  left: 10%;
+}
+main .links .hiddennav .project_star.three .star{
+  top: 10%;
+  left: 10%;
+}

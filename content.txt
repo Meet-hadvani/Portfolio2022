@@ -1,0 +1,19 @@
+software developerment
+c++, java, python, RestfulAPI, NodeJS, Git, AngularJs, MySQL, RDBMS, Django, Typescript
+
+software QA
+selenium, Jenkins, Cypress, OpenTest, Jmeter, PyTorch, cucumber
+
+Web developement
+html, css, php, javaScript,
+
+
+Audiobook website
+Free audio book website named AUDBUD in 2019
+
+3D hand tracking
+with computer vision tracked hand in 3D to create any surface touchscreen 2023
+
+Auto email system
+system for a cumpany to send custom emails to customers all at once
+
