@@ -1,9 +1,0 @@
-/* Set the initial state of the div to hidden */
-#my-div {
-  display: none;
-}
-
-/* Show the div when the link is clicked */
-#my-div:target {
-  display: block;
-}
